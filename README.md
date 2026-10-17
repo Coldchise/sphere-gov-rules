@@ -1,7 +1,13 @@
 # @coldchise/gov-rules
 
+[![CI](https://github.com/Coldchise/sphere-gov-rules/actions/workflows/ci.yml/badge.svg)](https://github.com/Coldchise/sphere-gov-rules/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@coldchise/gov-rules.svg)](https://www.npmjs.com/package/@coldchise/gov-rules)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Coldchise/sphere-gov-rules/blob/main/LICENSE)
+
 Philippine payroll statutory calculations as pure, deterministic TypeScript functions.
 Zero runtime dependencies. ESM + CommonJS. Strict typing.
+
+Source, issues, and releases: [github.com/Coldchise/sphere-gov-rules](https://github.com/Coldchise/sphere-gov-rules)
 
 Computes, from a monthly basic salary:
 
@@ -16,6 +22,8 @@ Computes, from a monthly basic salary:
 ```bash
 npm install @coldchise/gov-rules
 ```
+
+Requires Node.js 22 or later.
 
 ## Usage
 
@@ -48,6 +56,12 @@ calculateSSS(10_000); // { employeeShare: 500, employerShare: 1000, msc: 10000 }
 calculatePhilHealth(10_000); // { employeeShare: 250, employerShare: 250 }
 calculatePagIbig(10_000); // { employeeShare: 200, employerShare: 200 }
 calculateWithholdingTax(46_800); // 4568.4
+```
+
+CommonJS is supported as well:
+
+```js
+const { calculatePhilippinePayroll } = require('@coldchise/gov-rules');
 ```
 
 ## API
@@ -117,4 +131,4 @@ All four gates (typecheck, lint, tests, build) run automatically on `npm publish
 
 ## License
 
-MIT © Christian Vergara
+MIT © Christian Vergara — [github.com/Coldchise/sphere-gov-rules](https://github.com/Coldchise/sphere-gov-rules)
