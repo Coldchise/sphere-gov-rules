@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+package-lock.json
+AGENTS.md
+src/tests/README.md
+src/tests/docs/
